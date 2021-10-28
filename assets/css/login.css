@@ -1,0 +1,62 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    /* background-image: url(/assets/images/login_bg.jpg) no-repeat center; */
+    background-image: url(../images/login_bg.jpg);
+    /* 单独写就可以，直接写图片就会消失不见 */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.loginAndRegbox {
+    width: 400px;
+    height: 310px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    height: 60px;
+    background-image: url(../images/login_title.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.reg-box {
+    display: none;
+}
+
+.layui-form {
+    padding: 0 30px;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.links a {
+    font-size: 12px;
+}
+
+.layui-form-item {
+    position: relative;
+}
+
+.layui-input {
+    padding-left: 32px;
+}
+
+.layui-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
