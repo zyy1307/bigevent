@@ -8,20 +8,19 @@ function getUserInfo() {
         //     Authorization: localStorage.getItem('token') || ''
         // },已在baseAPI中统一添加
         success: function(res) {
-            if (res.status !== 0) {
-                return layui.layer.msg('登录失败，请重新登录')
+                if (res.status !== 0) {
+                    return layui.layer.msg('登录失败，请重新登录')
+                }
+                renderAvatar(res.data);
             }
-            layui.layer.msg('登录成功')
-            renderAvatar(res.data);
-        },
-        // complete函数无论成功失败都会执行
-        // complete: function(res) {
-        //     if (res.responseJSON.status === 1) {
-        //         // 强制清空token、强制跳转
-        //         localStorage.removeItem('token');
-        //         location.href = '/login.html'
-        //     }
-        // }
+            // complete函数无论成功失败都会执行
+            // complete: function(res) {
+            //     if (res.responseJSON.status === 1) {
+            //         // 强制清空token、强制跳转
+            //         localStorage.removeItem('token');
+            //         location.href = '/login.html'
+            //     }
+            // }
     })
 }
 // 调用渲染用户头像
